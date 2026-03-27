@@ -5,6 +5,10 @@ VisualStudioVersion = 17.14.36221.1 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseRentingSystem.Web", "HouseRentingSystem.Web\HouseRentingSystem.Web.csproj", "{0B4B2DDF-8916-4BBE-8DBA-7D96A3B86E8B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseRentingSystem.Data", "HouseRentingSystem.Data\HouseRentingSystem.Data.csproj", "{CA369BE3-EA65-4DE2-88F8-F3E428F026A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseRentingSystem.Models", "HouseRentingSystem.ViewModels\HouseRentingSystem.Models.csproj", "{F6ECDB2E-3BD2-4E91-B19E-4FA2623D6F09}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{0B4B2DDF-8916-4BBE-8DBA-7D96A3B86E8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B4B2DDF-8916-4BBE-8DBA-7D96A3B86E8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B4B2DDF-8916-4BBE-8DBA-7D96A3B86E8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA369BE3-EA65-4DE2-88F8-F3E428F026A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA369BE3-EA65-4DE2-88F8-F3E428F026A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA369BE3-EA65-4DE2-88F8-F3E428F026A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA369BE3-EA65-4DE2-88F8-F3E428F026A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6ECDB2E-3BD2-4E91-B19E-4FA2623D6F09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6ECDB2E-3BD2-4E91-B19E-4FA2623D6F09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6ECDB2E-3BD2-4E91-B19E-4FA2623D6F09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6ECDB2E-3BD2-4E91-B19E-4FA2623D6F09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
