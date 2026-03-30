@@ -1,4 +1,5 @@
 using HouseRentingSystem.Data;
+using HouseRentingSystem.Data.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,9 +18,11 @@ namespace HouseRentingSystem.Web
                 options.UseSqlServer(connectionString));
 
             // Configure Identity services
-            builder.Services.AddDefaultIdentity<IdentityUser>(options => {
+            builder.Services.AddDefaultIdentity<ApplicationUser>(options => 
+            {
                 options.SignIn.RequireConfirmedAccount = false;
             })
+            .AddRoles<IdentityRole<Guid>>()
             .AddEntityFrameworkStores<ApplicationDbContext>();
 
             // Add services to the container.
