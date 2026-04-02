@@ -15,5 +15,14 @@ namespace HouseRentingSystem.Data
         public DbSet<Agent> Agents { get; set; } = null!;
         public DbSet<Category> Categories { get; set; } = null!;
         public DbSet<House> Houses { get; set; } = null!;
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+
+            builder.Entity<House>()
+                .Property(h => h.PricePerMonth)
+                .HasPrecision(18, 2);
+        }
     }
 }

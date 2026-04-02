@@ -9,11 +9,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace HouseRentingSystem.Web.Data.Migrations
+namespace HouseRentingSystem.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260330112747_CreateDatabase")]
-    partial class CreateDatabase
+    [Migration("20260402172634_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -195,6 +195,7 @@ namespace HouseRentingSystem.Web.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<decimal>("PricePerMonth")
+                        .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<Guid?>("RenterId")
