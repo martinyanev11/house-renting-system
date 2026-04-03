@@ -1,4 +1,5 @@
-﻿using HouseRentingSystem.Data.Entities;
+﻿using HouseRentingSystem.Data.Configurations;
+using HouseRentingSystem.Data.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -20,9 +21,7 @@ namespace HouseRentingSystem.Data
         {
             base.OnModelCreating(builder);
 
-            builder.Entity<House>()
-                .Property(h => h.PricePerMonth)
-                .HasPrecision(18, 2);
+            builder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
         }
     }
 }

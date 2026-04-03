@@ -46,7 +46,7 @@ namespace HouseRentingSystem.Data.Entities
 
         [Required]
         [ForeignKey(nameof(Agent))]
-        public Guid AgentID { get; set; }
+        public Guid AgentId { get; set; }
         public Agent Agent { get; set; } = null!;
 
         [ForeignKey(nameof(Renter))]
