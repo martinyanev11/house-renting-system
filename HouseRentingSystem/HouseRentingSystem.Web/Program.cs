@@ -21,6 +21,10 @@ namespace HouseRentingSystem.Web
             builder.Services.AddDefaultIdentity<ApplicationUser>(options => 
             {
                 options.SignIn.RequireConfirmedAccount = false;
+                options.Password.RequireDigit = builder.Configuration.GetValue<bool>("Login:PasswordSettings:RequireDigit");
+                options.Password.RequireLowercase = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireNonAlphanumeric = false;
             })
             .AddRoles<IdentityRole<Guid>>()
             .AddEntityFrameworkStores<ApplicationDbContext>();
