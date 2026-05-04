@@ -1,22 +1,28 @@
 using System.Diagnostics;
 using HouseRentingSystem.Models.ViewModels;
 using HouseRentingSystem.Models.ViewModels.House;
+using HouseRentingSystem.Services.Contracts;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HouseRentingSystem.Web.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private IHouseService _houseService;
+
+        public HomeController(
+            IHouseService houseService)
         {
-            return View();
+            _houseService = houseService;
         }
 
         public IActionResult All()
         {
             return View(new AllHousesViewModel()
             {
-                Houses = Common.GetHouses()
+                Houses = Common.GetHouses(),
+                Rating = 6
             });
         }
 

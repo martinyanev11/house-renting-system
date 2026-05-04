@@ -1,5 +1,7 @@
 using HouseRentingSystem.Data;
 using HouseRentingSystem.Data.Entities;
+using HouseRentingSystem.Services;
+using HouseRentingSystem.Services.Contracts;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -33,9 +35,13 @@ namespace HouseRentingSystem.Web
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
             builder.Services.AddControllersWithViews();
 
+            builder.Services.AddScoped<IHouseService, HouseService>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
+
+            // Middlewares
             if (app.Environment.IsDevelopment())
             {
                 app.UseMigrationsEndPoint();
@@ -46,12 +52,13 @@ namespace HouseRentingSystem.Web
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
-
+            
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapDefaultControllerRoute();
