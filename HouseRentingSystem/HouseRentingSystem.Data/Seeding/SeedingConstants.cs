@@ -7,16 +7,19 @@
         public const string FirstUserEmail = "pesho@gmail.com";
         public const string FirstUserConcurrencyStamp = "1eec17a1-6ad4-4e7e-afe7-00db019d2671";
         public const string FirstUserPhone = "+3597777777";
+        public const string FirstUserSecurityStamp = "53b5d705-d41f-4a9a-8f22-10c4a67b160b";
 
         public const string SecondUserId = "8d21ec7b-02c3-4bcc-814a-4ab544c0d8ef";
         public const string SecondUserEmail = "gosho@gmail.com";
         public const string SecondUserConcurrencyStamp = "d0053384-49bf-4c3b-9e1d-ffb0dc08fd06";
         public const string SecondUserPhone = "+3599999999";
+        public const string SecondUserSecurityStamp = "adb0a92f-b369-49ec-8a23-0393419a72f7";
 
         public const string ThirdUserId = "b626221c-e7f0-4199-996b-aad91bfeaab5";
         public const string ThirdUserEmail = "dancho@gmail.com";
         public const string ThirdUserConcurrencyStamp = "daebd3f4-59d0-449a-b15a-1fd32f338691";
         public const string ThirdUserPhone = "+3598888888";
+        public const string ThirdUserSecurityStamp = "0ea86036-cbd3-49cb-a2f0-434fd53267be";
 
         // House Constants
         public const string FirstHouseId = "84e01585-7a09-45fd-8ae7-b520faac6340";

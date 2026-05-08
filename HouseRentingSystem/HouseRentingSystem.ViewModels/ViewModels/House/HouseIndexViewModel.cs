@@ -1,10 +1,8 @@
 ﻿namespace HouseRentingSystem.Models.ViewModels.House
 {
-    public class HouseDetailsViewModel
+    public class HouseIndexViewModel
     {
-        public Guid Id { get; set; }
         public string Title { get; set; } = null!;
-        public string Address { get; set; } = null!;
         public string ImageUrl { get; set; } = null!;
     }
 }

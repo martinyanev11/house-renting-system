@@ -22,7 +22,8 @@ namespace HouseRentingSystem.Data.Seeding
                     AgentId = Guid.Parse(SeedingConstants.FirstAgentId),
                     CreatedOn = DateTime.Parse(SeedingConstants.CreatedOn),
                     EmailConfirmed = true,
-                    ConcurrencyStamp = Guid.Parse(SeedingConstants.FirstUserConcurrencyStamp).ToString(),
+                    ConcurrencyStamp = SeedingConstants.FirstUserConcurrencyStamp,
+                    SecurityStamp = SeedingConstants.FirstUserSecurityStamp,
                     PhoneNumber = SeedingConstants.FirstUserPhone,
                 },
                 new ApplicationUser()
@@ -35,7 +36,8 @@ namespace HouseRentingSystem.Data.Seeding
                     AgentId = Guid.Parse(SeedingConstants.SecondAgentId),
                     CreatedOn = DateTime.Parse(SeedingConstants.CreatedOn),
                     EmailConfirmed = true,
-                    ConcurrencyStamp = Guid.Parse(SeedingConstants.SecondUserConcurrencyStamp).ToString(),
+                    ConcurrencyStamp = SeedingConstants.SecondUserConcurrencyStamp,
+                    SecurityStamp = SeedingConstants.SecondUserSecurityStamp,
                     PhoneNumber = SeedingConstants.SecondUserPhone,
                 },
                 new ApplicationUser()
@@ -47,7 +49,8 @@ namespace HouseRentingSystem.Data.Seeding
                     NormalizedEmail = SeedingConstants.ThirdUserEmail.ToUpper(),
                     CreatedOn = DateTime.Parse(SeedingConstants.CreatedOn),
                     EmailConfirmed = true,
-                    ConcurrencyStamp = Guid.Parse(SeedingConstants.ThirdUserConcurrencyStamp).ToString(),
+                    ConcurrencyStamp = SeedingConstants.ThirdUserConcurrencyStamp,
+                    SecurityStamp = SeedingConstants.ThirdUserSecurityStamp,
                     PhoneNumber = SeedingConstants.ThirdUserPhone,
                 },
             };

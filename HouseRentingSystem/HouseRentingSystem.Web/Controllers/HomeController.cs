@@ -1,37 +1,29 @@
-using System.Diagnostics;
 using HouseRentingSystem.Models.ViewModels;
 using HouseRentingSystem.Models.ViewModels.House;
 using HouseRentingSystem.Services.Contracts;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 
 namespace HouseRentingSystem.Web.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
-        private IHouseService _houseService;
+        private readonly IHouseService _houseService;
 
-        public HomeController(
-            IHouseService houseService)
+        public HomeController(IHouseService houseService)
         {
             _houseService = houseService;
         }
 
-        public IActionResult All()
+        [AllowAnonymous]
+        public async Task<IActionResult> Index()
         {
-            return View(new AllHousesViewModel()
-            {
-                Houses = Common.GetHouses(),
-                Rating = 6
-            });
+            var allHouses = await _houseService.GetIndexDataAsync();
+            return View(allHouses);
         }
 
-        public IActionResult Details()
-        {
-            var house = Common.GetHouses().FirstOrDefault();
-            return View(house);
-        }
-
+        [AllowAnonymous]
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
