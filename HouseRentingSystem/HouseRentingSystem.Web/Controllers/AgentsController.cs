@@ -5,14 +5,14 @@ namespace HouseRentingSystem.Web.Controllers
 {
     public class AgentsController : BaseController
     {
-        private readonly ApplicationDbContext _data;
 
-        public AgentsController(ApplicationDbContext data)
+
+        public AgentsController()
         {
-            this._data = data;
+            
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Become()
         {
             return View();
         }

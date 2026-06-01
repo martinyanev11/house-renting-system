@@ -1,5 +1,6 @@
 ﻿using HouseRentingSystem.Models.ViewModels.House;
 using HouseRentingSystem.Services.Contracts;
+using HouseRentingSystem.Web.Infrastructure;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
@@ -24,7 +25,7 @@ namespace HouseRentingSystem.Web.Controllers
 
         public async Task<IActionResult> Mine()
         {
-            var currentUserId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+            var currentUserId = this.User.GetId();
 
             var model = await _houseService.GetAgentHousesAsync(currentUserId);
             return View(model);
